@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4o5kphofltw4"]
+[gd_scene load_steps=4 format=3 uid="uid://ok7f0jne0qff"]
 
-[ext_resource type="Texture2D" uid="uid://c62vw3dwv12hx" path="res://assets/Gray.png" id="1_qtv3y"]
-[ext_resource type="LabelSettings" uid="uid://iubd5adyqn7n" path="res://assets/LG_Title_96.tres" id="2_cmk6n"]
+[ext_resource type="Script" path="res://Scenes/Main/Main.gd" id="1_cmk6n"]
+[ext_resource type="Texture2D" uid="uid://c62vw3dwv12hx" path="res://assets/Gray.png" id="1_p8rbg"]
+[ext_resource type="LabelSettings" path="res://Resources/TitleLabel96.tres" id="2_qtv3y"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cmk6n")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -18,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_qtv3y")
+texture = ExtResource("1_p8rbg")
 stretch_mode = 1
 
 [node name="MC" type="MarginContainer" parent="."]
@@ -38,15 +40,12 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MC/VB"]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
-text = "SOKOBAN
-"
-label_settings = ExtResource("2_cmk6n")
+text = "SOKOBAN (ISH)"
+label_settings = ExtResource("2_qtv3y")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="MC/VB"]
 layout_mode = 2
 size_flags_vertical = 3
-columns = 2
+columns = 6
